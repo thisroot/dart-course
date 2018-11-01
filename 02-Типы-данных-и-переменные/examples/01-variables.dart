@@ -70,14 +70,14 @@ main(List<String> args) {
   print(str3);
 
   var fullName = '';
-  print(fullName.isEmpty);
+  print('fullName.isEmpty ${fullName.isEmpty}');
 
   var hitPoints = 0;
-  print(hitPoints <= 0);
+  print('hitPoints <= 0 ${hitPoints <= 0}');
 
   var unicorn;
-  print(unicorn == null);
+  print('unicorn == null ${unicorn == null}');
 
   var iMeantToDoThis = 0 / 0;
-  print(iMeantToDoThis.isNaN);
+  print('iMeantToDoThis.isNaN ${iMeantToDoThis.isNaN}');
 }

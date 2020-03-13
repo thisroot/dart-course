@@ -92,23 +92,23 @@ names.add(42); // Ошибка
 
 - так же джерерики позволяют избегать дублирования кода - к примеру позволяют использовать единый интерфейс и его реализацию между множеством типов
 
-      ```dart
-        abstract class ObjectCache {
-            Object getByKey(String key);
-            void setByKey(String key, Object value);
-        }
+```dart
+    abstract class ObjectCache {
+        Object getByKey(String key);
+        void setByKey(String key, Object value);
+    }
 
-        abstract class StringCache {
-            String getByKey(String key);
-            void setByKey(String key, String value);
-        }
-      ```
+    abstract class StringCache {
+        String getByKey(String key);
+        void setByKey(String key, String value);
+    }
+```
       - Можно заменить на единый интерфейс. который требует раздичные типы данных:
 
-      ```dart
-        abstract class Cache<T> {
-            T getByKey(String key);
-            void setByKey(String key, T value);
-        }
-      ```
+```dart
+    abstract class Cache<T> {
+        T getByKey(String key);
+        void setByKey(String key, T value);
+    }
+```
       - В этом коде `T` является типом заполнителем, который разработчик может специфизировать позднее в реализации конкретного класса
